@@ -1,5 +1,5 @@
 [build]
-base="findmywager/"
+base="findmywager"
 publish="findmywager/build"
 command="npm run build"
 
