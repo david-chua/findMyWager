@@ -6,7 +6,7 @@ function WagerForm(props){
     
     const handleChange = (event) => {
         setWagerInfo({
-            ... wagerInfo,
+            ...wagerInfo,
             [event.target.name]: event.target.value
         })
     }
@@ -21,20 +21,14 @@ function WagerForm(props){
         let decimalVal;
         if (isNegative) {
             decimalVal = -(100/wagerInfo.odds);
-            console.log(Number(wagerInfo.supposedWinning/decimalVal))
-            console.log(Number(wagerInfo.supposedWinning))
-            console.log(roundToTwo(Number(wagerInfo.supposedWinning/decimalVal) + Number(wagerInfo.supposedWinning)))
             setWagerInfo({
-                ... wagerInfo,
+                ...wagerInfo,
                 newBet: roundToTwo(wagerInfo.supposedWinning/decimalVal),
                 totalWinning: roundToTwo(Number(wagerInfo.supposedWinning/decimalVal) + Number(wagerInfo.supposedWinning))
             })
             return;
         } else {
             decimalVal = wagerInfo.odds/100;
-            console.log(Number(wagerInfo.supposedWinning/decimalVal))
-            console.log(Number(wagerInfo.supposedWinning))
-            console.log(roundToTwo(Number(wagerInfo.supposedWinning/decimalVal) + Number(wagerInfo.supposedWinning)))
             setWagerInfo({
                 ...wagerInfo,
                 newBet: roundToTwo(wagerInfo.supposedWinning/decimalVal),
