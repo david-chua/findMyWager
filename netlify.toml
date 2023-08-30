@@ -1,6 +1,6 @@
 [build]
 base="findmywager"
-publish="findmywager/build"
+publish="/build"
 command="npm run build"
 
 [[redirects]]
